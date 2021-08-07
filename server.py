@@ -50,7 +50,7 @@ def create_user():
     )
     db.session.add(new_user)
     db.session.commit()
-    return jsonify({"message":"user created"}, 200)
+    return jsonify({"message":"user created"}), 201
 
 @app.route("/user/descending_id", methods=["GET"])
 def get_all_users_descending():
